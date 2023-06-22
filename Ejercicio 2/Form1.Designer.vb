@@ -49,7 +49,7 @@ Partial Class Form1
         ' 
         cmdEjecutar.Location = New Point(12, 12)
         cmdEjecutar.Name = "cmdEjecutar"
-        cmdEjecutar.Size = New Size(320, 58)
+        cmdEjecutar.Size = New Size(396, 58)
         cmdEjecutar.TabIndex = 3
         cmdEjecutar.Text = "Comenzar"
         cmdEjecutar.UseVisualStyleBackColor = True
@@ -65,14 +65,14 @@ Partial Class Form1
         grdMostrarMatriz.ReadOnly = True
         grdMostrarMatriz.RowHeadersVisible = False
         grdMostrarMatriz.RowTemplate.Height = 25
-        grdMostrarMatriz.Size = New Size(320, 260)
+        grdMostrarMatriz.Size = New Size(396, 260)
         grdMostrarMatriz.TabIndex = 5
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(423, 425)
         Controls.Add(grdMostrarMatriz)
         Controls.Add(cmdEjecutar)
         Controls.Add(lblMayor)
