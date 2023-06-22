@@ -22,25 +22,11 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        grdMostrarMatriz = New DataGridView()
         lblSuma = New Label()
         lblMayor = New Label()
         cmdEjecutar = New Button()
-        CType(grdMostrarMatriz, ComponentModel.ISupportInitialize).BeginInit()
+        lstMostrarMatriz = New ListBox()
         SuspendLayout()
-        ' 
-        ' grdMostrarMatriz
-        ' 
-        grdMostrarMatriz.AllowUserToAddRows = False
-        grdMostrarMatriz.AllowUserToDeleteRows = False
-        grdMostrarMatriz.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        grdMostrarMatriz.Location = New Point(12, 76)
-        grdMostrarMatriz.Name = "grdMostrarMatriz"
-        grdMostrarMatriz.ReadOnly = True
-        grdMostrarMatriz.RowHeadersVisible = False
-        grdMostrarMatriz.RowTemplate.Height = 25
-        grdMostrarMatriz.Size = New Size(320, 258)
-        grdMostrarMatriz.TabIndex = 0
         ' 
         ' lblSuma
         ' 
@@ -69,24 +55,31 @@ Partial Class Form1
         cmdEjecutar.Text = "Comenzar"
         cmdEjecutar.UseVisualStyleBackColor = True
         ' 
+        ' lstMostrarMatriz
+        ' 
+        lstMostrarMatriz.FormattingEnabled = True
+        lstMostrarMatriz.ItemHeight = 15
+        lstMostrarMatriz.Location = New Point(12, 76)
+        lstMostrarMatriz.Name = "lstMostrarMatriz"
+        lstMostrarMatriz.Size = New Size(320, 259)
+        lstMostrarMatriz.TabIndex = 4
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(lstMostrarMatriz)
         Controls.Add(cmdEjecutar)
         Controls.Add(lblMayor)
         Controls.Add(lblSuma)
-        Controls.Add(grdMostrarMatriz)
         Name = "Form1"
         Text = "Form1"
-        CType(grdMostrarMatriz, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents grdMostrarMatriz As DataGridView
     Friend WithEvents lblSuma As Label
     Friend WithEvents lblMayor As Label
     Friend WithEvents cmdEjecutar As Button
+    Friend WithEvents lstMostrarMatriz As ListBox
 End Class
