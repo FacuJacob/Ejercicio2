@@ -21,6 +21,12 @@
             Next
         Next
 
+        grdMostrarMatriz.Columns.Clear()
+        For j = 1 To 4
+            grdMostrarMatriz.Columns.Add("", "")
+        Next
+        grdMostrarMatriz.Rows.Add(5)
+
 
     End Sub
 End Class

@@ -25,7 +25,8 @@ Partial Class Form1
         lblSuma = New Label()
         lblMayor = New Label()
         cmdEjecutar = New Button()
-        lstMostrarMatriz = New ListBox()
+        grdMostrarMatriz = New DataGridView()
+        CType(grdMostrarMatriz, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lblSuma
@@ -33,18 +34,16 @@ Partial Class Form1
         lblSuma.AutoSize = True
         lblSuma.Location = New Point(12, 337)
         lblSuma.Name = "lblSuma"
-        lblSuma.Size = New Size(41, 15)
+        lblSuma.Size = New Size(0, 15)
         lblSuma.TabIndex = 1
-        lblSuma.Text = "Label1"
         ' 
         ' lblMayor
         ' 
         lblMayor.AutoSize = True
         lblMayor.Location = New Point(12, 352)
         lblMayor.Name = "lblMayor"
-        lblMayor.Size = New Size(41, 15)
+        lblMayor.Size = New Size(0, 15)
         lblMayor.TabIndex = 2
-        lblMayor.Text = "Label1"
         ' 
         ' cmdEjecutar
         ' 
@@ -55,31 +54,37 @@ Partial Class Form1
         cmdEjecutar.Text = "Comenzar"
         cmdEjecutar.UseVisualStyleBackColor = True
         ' 
-        ' lstMostrarMatriz
+        ' grdMostrarMatriz
         ' 
-        lstMostrarMatriz.FormattingEnabled = True
-        lstMostrarMatriz.ItemHeight = 15
-        lstMostrarMatriz.Location = New Point(12, 76)
-        lstMostrarMatriz.Name = "lstMostrarMatriz"
-        lstMostrarMatriz.Size = New Size(320, 259)
-        lstMostrarMatriz.TabIndex = 4
+        grdMostrarMatriz.AllowUserToAddRows = False
+        grdMostrarMatriz.AllowUserToDeleteRows = False
+        grdMostrarMatriz.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        grdMostrarMatriz.ColumnHeadersVisible = False
+        grdMostrarMatriz.Location = New Point(12, 74)
+        grdMostrarMatriz.Name = "grdMostrarMatriz"
+        grdMostrarMatriz.ReadOnly = True
+        grdMostrarMatriz.RowHeadersVisible = False
+        grdMostrarMatriz.RowTemplate.Height = 25
+        grdMostrarMatriz.Size = New Size(320, 260)
+        grdMostrarMatriz.TabIndex = 5
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(lstMostrarMatriz)
+        Controls.Add(grdMostrarMatriz)
         Controls.Add(cmdEjecutar)
         Controls.Add(lblMayor)
         Controls.Add(lblSuma)
         Name = "Form1"
         Text = "Form1"
+        CType(grdMostrarMatriz, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
     Friend WithEvents lblSuma As Label
     Friend WithEvents lblMayor As Label
     Friend WithEvents cmdEjecutar As Button
-    Friend WithEvents lstMostrarMatriz As ListBox
+    Friend WithEvents grdMostrarMatriz As DataGridView
 End Class
