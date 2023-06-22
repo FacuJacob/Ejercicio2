@@ -21,12 +21,22 @@
             Next
         Next
 
+        --------------------------------------------------------------------------------------
+
         grdMostrarMatriz.Columns.Clear()
         For j = 1 To 4
             grdMostrarMatriz.Columns.Add("", "")
         Next
         grdMostrarMatriz.Rows.Add(5)
 
+        --------------------------------------------------------------------------------------
 
+        For f = 1 To 5
+            For c = 1 To 4
+                grdMostrarMatriz.Item(c - 1, f - 1).Value = matriz(f, c)
+            Next
+        Next
+        lblMayor.Text = "El mayor valor de las ultimas 3 columnas es: " & may
+        lblSuma.Text = "La suma de las ultimas 4 filas es: " & suma
     End Sub
 End Class
